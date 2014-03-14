@@ -1,0 +1,245 @@
+Encapsulation
+Polymorphism
+Inheritance
+
+YAGNI = You Ain't Gonna Need It
+
+Single Responsibility Principle
+
+
+1. Write a Failing Test
+
+2. Implement Code
+- Test goes green- Repeat 1.
+
+3. Refactor
+- Improve Code
+- Don't Change Behavior
+- Incremental->Small Steps
+
+
+Alt-O shows overrides
+
+EQUALS 
+- not allowed to throw exceptions
+- reflexive a.equals(a)
+- symmetric
+- transitive a.equals(b) b.equals(c) c.equals(a)
+- consistency (iff neither a nor b changes)
+
+
+Effective Java : Josh Bloom
+(some strange behaviors in the JDK)
+
+
+HASHCODE
+- if a.equals(b) a b (must be identical? or same hashcode)
+
+Whenever you override equals, you must overrider hashcode as well
+
+Collections (all the java data types with lots of values, etc.)
+
+*** Objects should be immutable ***
+
+Implement the AND method
+ P(A && B) = P(A) * P(B)
+
+
+2-7-14
+
+VALUE OBJECT:
+
+IDENTITY IS DUE TO VALUE
+
+PRIMITIVE TYPES (they aren't objects- they are alwaystreated as values)
+int, double, boolean
+
+
+PRINCIPLES OF SIMPLE DESIGN
+1) IT WORKS
+2) IT COMMUNICATES
+- PARAMETER, METHOD NAME
+3) REPETITION/DUPLICATION
+- DRY don't repeat yourself
+4) NO EXTRA 
+YAGNI
+5) 
+
+
+
+
+DELEGATION
+A Contains/Uses B
+A Doesn't Know about B
+A "Buys" B
+
+COLLABORATION (2-way)
+A & B know about Each Other & Work Together
+SYMBIOTIC
+EXAMPLE: OR
+
+INHERITANCE ("IS A")
+
+
+Quantity Class and Units need to be understood
+
+3 ft. = 1 yard
+
+1760 yards = 1 mile
+
+1 tbsp = 3 tsp
+
+1 oz = 2 tbsp
+
+8 oz = 1 cup
+
+2-14-14
+HIPPO highly paid person's opinion
+Donald Knuth: Premature Optimization is the Root of All Evil
+
+Profiling application- help identify performance issues
+
+
+2-21-14
+"Tell, don't ask"- article with Law of Demeter
+http://pragprog.com/articles/tell-dont-ask
+
+Implement Add, with a throwable if the units aren't commensurable
+
+Simple Design:
+It works
+It communicates
+It doesn't repeat itself
+YAGNE
+
+
+
+DIFFERENT TYPES OF QUANTITY
+
+STATE/NOMINAL
+- Gender
+
+ORDERED/ORDINAL
+- Social Class
+
+SCALED/INTEGER
+- Temperature, Year Date
+
+ARITHMETIC
+- has add defined on it
+
+
+
+DELEGATION
+A->B (Quantity is A, Unit is B, B doesn't know about A)
+Unit doesn't know about Quantity
+
+COLLABORATION
+A<->B, A & B work together, symbiotic relationship.
+UNIT conversions-- the two UNIT objects collaborate with each other
+(one gets passed into the other, they are operated on)
+
+INHERITANCE
+A
+^
+|
+B
+
+Only for "is a" relationships
+
+Waltzing with Bears  - good risk management book
+Risk = P(E) * Cost(E)
+------
+Homework: Josh Karievski (Refactoring to Patterns)
+
+Come up with a solution for best quantity-- work out which is the best quantity, and the test(do a bunch of them)
+Use BetterThan- how can we work out the best (re-use Better Than)
+
+2-29-14
+
+---Industrial Logic---
+Behavior-driven development.
+Story Test- now called scenarios
+Not use-case, but user stories
+Anzeneering: Anze=Safety in Japanese
+Building safeguards as we work.
+"Agile and Beyond"- Detroit
+
+"Selenium"- dangerous toy- for testing. Ajax asynchronous.
+Will do false positives. Celenium tests may not be worth the time.
+
+Industrial Logic - small safe bits working off one trunk in GIT
+Too many branches-- can have merge problems
+
+Feature Fake
+
+Continuous Development
+
+Acceptance tests
+
+microtests-- test things in microseconds
+Selenium tests take longer (user interface-oriented tests. Usually not the first place to focus)
+
+10 years ago->
+1. Failing Acceptance Test -  big one
+2. Then TDD lots of small micro-tests.
+3. Passing Acceptance Test
+
+Product managers- product acceptance tests.
+
+BDD- the missing step
+Start dev with a failing acceptance test.
+
+Talking about it- documents, scenarios for stories that have to work.
+AT = "scenario"
+embryonic version of the feature.
+
+Behavior-Driven development
+Evolutionary Design - important to agile
+
+end-to-end, quick, and embryonic
+
+Evolutionary Design: must understand the need
+
+
+Behavior-Driven - higher-level than test driven
+
+User story (more specific than use case)
+then user scenarios.
+Automate scenarios...sometimes
+Shared understanding about what want to build.
+
+Lighter process, don't need to create scenarios always (tester and extra level of collaboration)
+
+Multiple ways to do it. Scenarios are mini-specification. They become part of the test code.
+
+Behavior-Driven-Development:
+Heavier weight than TDD
+
+Executable Documentation
+
+Ronny Kavahi, Amazon
+Website technique A/B testing- final business value
+
+Recursion:
+Initial question
+Recursive question
+End condition
+
+public static String reverse (String toReverse) {
+	if (toReverse.length() == 1) {
+		return toReverse
+	}
+
+	return reverse(toReverse.substring(1) + to Reverse.charAt(0);
+}
+
+Create account on github, send link to him (on Piazza), post all code.
+comment on TDD.
+
+Flowcon.com
+Jeff Patton
+Cindy Courage
+
+Netflix
+Etsy

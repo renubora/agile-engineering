@@ -1,0 +1,3 @@
+Polymorphism: The ability of objects belonging to different types to respond to method calls of methods of the same name each one according to a type-specific behavior
+
+Inheritance: A way to form new classes using classes that have already been defined
